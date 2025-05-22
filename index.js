@@ -1,11 +1,11 @@
 import express from "express";
 import http from "http";
-import { WebSocketServer } from "ws"; // Changed this line
+import { WebSocketServer } from "ws"; 
 import url from "url";
 
 const app = express();
 const server = http.createServer(app);
-const wss = new WebSocketServer({ server }); // Changed this line
+const wss = new WebSocketServer({ server });
 
 app.use(express.json());
 app.get("/", (req, res) => res.send("WebSocket Chat Server is running..."));
